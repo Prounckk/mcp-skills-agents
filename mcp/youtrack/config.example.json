@@ -1,0 +1,7 @@
+{
+  "youtrack_url": "https://your-instance.youtrack.cloud",
+  "youtrack_token": "perm:your-api-token",
+  "is_cloud": true,
+  "max_results_default": 20,
+  "timeout_seconds": 30
+}
