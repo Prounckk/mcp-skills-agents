@@ -1,0 +1,12 @@
+# YouTrack MCP Server Configuration
+# Copy this to ~/.zshenv and customize with your values
+
+# Your YouTrack instance URL (no trailing slash)
+export YOUTRACK_URL="https://youtrack.example.com"
+
+# YouTrack token loaded securely from macOS keychain
+# This retrieves the token you stored with: security add-generic-password
+export YOUTRACK_TOKEN="$(security find-generic-password -a "$USER" -s "youtrack-mcp-token" -w 2>/dev/null)"
+
+# Optional: Add to PATH if you want to run the server directly
+# export PATH="$PATH:/path/to/youtrack-js/dist"

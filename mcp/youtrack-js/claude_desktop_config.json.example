@@ -1,0 +1,33 @@
+{
+  "$schema": "Example Claude Desktop MCP configuration for YouTrack server",
+  "mcpServers": {
+    "youtrack": {
+      "_comment": "Recommended: Uses credentials from ~/.zshenv (more secure)",
+      "command": "node",
+      "args": ["/absolute/path/to/youtrack-js/dist/index.js"]
+    },
+
+    "_youtrack_explicit": {
+      "_comment": "Alternative: Explicit credentials (less secure, credentials in plain text)",
+      "_disabled": "Remove '_' prefix from key name to use this configuration",
+      "command": "node",
+      "args": ["/absolute/path/to/youtrack-js/dist/index.js"],
+      "env": {
+        "YOUTRACK_URL": "https://youtrack.example.com",
+        "YOUTRACK_TOKEN": "perm:your_permanent_token"
+      }
+    }
+  },
+
+  "_instructions": {
+    "setup": [
+      "1. Replace '/absolute/path/to/youtrack-js/dist/index.js' with actual path",
+      "2. For recommended config: Ensure ~/.zshenv has YOUTRACK_URL and YOUTRACK_TOKEN",
+      "3. For explicit config: Replace YOUTRACK_URL and YOUTRACK_TOKEN with your values",
+      "4. Remove '_' prefix from _youtrack_explicit and rename to 'youtrack' if using explicit config",
+      "5. Save this file to: ~/Library/Application Support/Claude/claude_desktop_config.json",
+      "6. Restart Claude Desktop"
+    ],
+    "security_note": "The recommended configuration (using ~/.zshenv with keychain) is more secure because it keeps credentials out of this config file."
+  }
+}
