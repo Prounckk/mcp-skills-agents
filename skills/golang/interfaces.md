@@ -76,8 +76,8 @@ func main() {
     file, _ := os.Open("data.txt")
     ProcessData(file)
     
-    bytes := []byte("test data")
-    ProcessData(bytes.NewReader(bytes))
+    data := []byte("test data")
+    ProcessData(bytes.NewReader(data))
 }
 ```
 

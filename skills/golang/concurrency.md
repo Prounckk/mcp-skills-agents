@@ -283,6 +283,17 @@ func main() {
 ### Fan-out, Fan-in
 
 ```go
+func worker(input <-chan int) <-chan int {
+    out := make(chan int)
+    go func() {
+        defer close(out)
+        for n := range input {
+            out <- n * n  // Process input
+        }
+    }()
+    return out
+}
+
 func fanOut(input <-chan int, numWorkers int) []<-chan int {
     channels := make([]<-chan int, numWorkers)
     for i := 0; i < numWorkers; i++ {

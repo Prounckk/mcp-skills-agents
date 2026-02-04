@@ -387,6 +387,19 @@ func main() {
 ## Graceful Shutdown
 
 ```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "log"
+    "net/http"
+    "os"
+    "os/signal"
+    "syscall"
+    "time"
+)
+
 func main() {
     server := &http.Server{Addr: ":8080"}
     
