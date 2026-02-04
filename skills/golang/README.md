@@ -24,19 +24,11 @@ This directory contains practical skills and examples for writing idiomatic Go c
 - **File**: `interfaces.md`
 - **Topics**: interface definitions, small interfaces, type assertions
 
-### 5. Package Organization
-- **File**: `packages.md`
-- **Topics**: package structure, imports, documentation
-
-### 6. Testing Strategies
+### 5. Testing Strategies
 - **File**: `testing.md`
 - **Topics**: unit tests, table-driven tests, benchmarks
 
-### 7. Memory Management
-- **File**: `memory.md`
-- **Topics**: pointers, value vs pointer receivers, memory allocation
-
-### 8. Context Usage
+### 6. Context Usage
 - **File**: `context.md`
 - **Topics**: context propagation, cancellation, deadlines
 
